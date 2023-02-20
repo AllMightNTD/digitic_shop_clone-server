@@ -40,6 +40,9 @@ var userSchema = new mongoose.Schema(
         },
         address: [{ type: ObjectId, ref: 'Address' }],
         wishlist: [{ type: ObjectId, ref: 'Product' }],
+        refeshToken: {
+            type: String,
+        },
     },
     {
         timestamps: true,
