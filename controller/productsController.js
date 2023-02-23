@@ -91,7 +91,7 @@ const getAllProducts = async (req, res) => {
         }
 
         const allProducts = await query;
-        res.json({ allProducts });
+        res.json(allProducts);
     } catch (error) {
         throw new Error(error);
     }

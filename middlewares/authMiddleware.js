@@ -24,7 +24,10 @@ async function isAdmin(req, res, next) {
     const { email } = req.user;
     const adminUser = await User.findOne({ email });
     if (adminUser.role !== 'admin') {
-        throw new Error('You are not an admin');
+        res.json({
+            status: false,
+            msg: 'You are not admin',
+        });
     } else {
         next();
     }

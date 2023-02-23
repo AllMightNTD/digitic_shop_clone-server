@@ -19,7 +19,7 @@ router.post('/register', createUser);
 router.post('/login', loginUser);
 router.post('/forgotpass', forgotPass);
 router.post('/resetpass', resetPass);
-router.get('/all-users', getAllUsers);
+router.get('/all-users', authMiddelware.authMiddleware, authMiddelware.isAdmin, getAllUsers);
 router.get('/refesh', handleRefeshToken);
 router.get('/logout', logoutUser);
 router.get('/:id', authMiddelware.authMiddleware, authMiddelware.isAdmin, getaUser);
