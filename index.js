@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 4000;
 const authRouter = require('././routes/authRoute');
 const productRouter = require('././routes/productRouter');
 const blogRoute = require('././routes/blogRoute');
+const categoryRoute = require('././routes/prodCategoryRoute');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 app.use(cookieParser());
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 app.use('/api/user', authRouter);
 app.use('/api/product', productRouter);
 app.use('/api/blog', blogRoute);
+app.use('/api/category', categoryRoute);
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://localhost:${PORT}`);
