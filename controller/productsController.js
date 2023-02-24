@@ -109,4 +109,6 @@ const deleteProduct = async (req, res) => {
     }
 };
 
-module.exports = { createProduct, getAproduct, getAllProducts, updateProduct, deleteProduct };
+const addToWishList = async (req, res) => {};
+
+module.exports = { createProduct, getAproduct, getAllProducts, updateProduct, deleteProduct, addToWishList };
