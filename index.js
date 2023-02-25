@@ -10,6 +10,7 @@ const productRouter = require('././routes/productRouter');
 const blogRoute = require('././routes/blogRoute');
 const categoryRoute = require('././routes/prodCategoryRoute');
 const brandRoute = require('././routes/prodBrandRoute');
+const couponRoute = require('././routes/couponRoute');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 app.use(cookieParser());
@@ -26,6 +27,7 @@ app.use('/api/product', productRouter);
 app.use('/api/blog', blogRoute);
 app.use('/api/category', categoryRoute);
 app.use('/api/brand', brandRoute);
+app.use('/api/coupon', couponRoute);
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://localhost:${PORT}`);
 });
